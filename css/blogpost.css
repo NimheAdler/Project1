@@ -1,0 +1,46 @@
+.blogpost{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "post about";
+}
+
+@media(max-width: 900px){
+    .blogpost{
+        display: grid;
+        grid-template-areas:
+        "post" 
+        "about";
+        grid-template-columns: 100%;
+    } 
+}
+
+.post{
+    grid-area: post;
+   padding: 15px;
+}
+
+.about{
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.aboutme{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.socialmedia{
+    display: flex;
+}
+
+figcaption{
+    font-size: .8em;
+    font-style: italic;
+}
+
+.wallimg{
+    max-width: 100%;
+}

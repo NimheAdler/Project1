@@ -1,0 +1,135 @@
+@import "./blogpost.css";
+@import "./button.css";
+@import "./card.css";
+@import "./footer.css";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: linear-gradient(rgba(15, 212, 97, 0.1),rgba(1, 49, 17, 0.3)), url('../media/bamboo.webp');
+  background-size: cover;
+  font-family: 'Zen Kurenaido';
+}
+
+.nav{
+  width: 100%;
+  justify-content: space-between;
+  background-color: #400601;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3px .2em;
+}
+
+.elemento{
+  padding: 0.2em 2em;
+  font-size: .8em;
+  border-bottom: 3px solid #400601;
+  transition: 1s;
+}
+
+.elemento:hover{
+  border-bottom: 3px solid white;
+}
+
+.container{
+  display: grid;
+  grid: 
+  "header"
+  "posts";
+}
+
+.header{
+  position: relative;
+  overflow: hidden;
+  grid-area: header;
+  height: 18em;
+}
+
+.posts{
+  grid-area: posts;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1em 0;
+  flex-wrap: wrap;
+}
+
+.superpuesto{
+  font-size: 5em;
+  font-weight: 500;
+  color: #fff;
+  filter: drop-shadow(2px 2px 2px black);
+  position: absolute;
+  top: 50%;
+  left:  50%;
+  transform: translate(-50%, -50%);
+}
+
+a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.subtext{
+font-size: small;
+text-align: center;  
+}
+
+.title{
+text-align: center;
+}
+
+.subtitle{
+  text-underline-position: below;
+}
+
+.citend{
+  text-align: right;
+  color: rgb(19, 158, 158);
+}
+
+.avatar{
+  size: 5em;
+  border-radius: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list{
+  list-style-type: circle;
+  padding-left: 10px;
+}
+
+.asocials{
+  color: blueviolet;
+}
+
+@media(max-width: 768px){
+  .nav{
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+
+  .mybutton{
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .posts{
+    flex-direction: column;
+  }
+}
